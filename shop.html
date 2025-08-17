@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store - Luxury Shop Spectrum</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="otherstyles.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="text-gray-800 bg-gray-100">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-8 py-4 bg-white shadow-sm mb-9">
+    <div class="flex items-center space-x-2">
+      <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="cropped-Luxury-Shop-Spectrum-logo">
+    </div>
+    <nav>
+      <ul class="flex space-x-6 font-semibold">
+        <li><a href="index.html" class="hover:text-purple-600">HOME</a></li>
+        <li><a href="shop.html" class="text-purple-600">SHOP</a></li>
+        <li><a href="contactus.html" class="hover:text-purple-600">CONTACT US</a></li>
+      </ul>
+    </nav>
+    <div>
+      <i class='bxr bxs-shopping-bag'></i>
+      <span class="absolute px-1 text-xs text-white bg-black rounded-full ">0</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex px-8 py-8 ">
+
+    <!-- Sidebar -->
+    <aside class="w-1/4 pr-8">
+      <!-- Search -->
+      <div class="mb-6">
+        <input type="text" placeholder="Search products..." class="w-full p-2 border border-gray-300 rounded" />
+      </div>
+
+      <!-- Filter by Price -->
+      <div class="mb-6">
+        <h3 class="mb-2 font-semibold">Filter by Price</h3>
+        <input title="" placeholder="-" type="range" min="0" max="200" value="100" class="w-full" />
+        <div class="flex items-center justify-between mt-2">
+          <span>Price: $0 - $200</span>
+          <button class="px-3 py-1 text-white bg-black rounded">Filter</button>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="mb-6">
+        <h3 class="mb-2 font-semibold">Categories</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="text-gray-600 hover:text-purple-600">Uncategorized (10)</a></li>
+        </ul>
+      </div>
+
+      <!-- Best Sellers -->
+      <div>
+        <h3 class="mb-2 font-semibold">Our Best Sellers</h3>
+        <ul class="space-y-4">
+          <li class="flex items-center space-x-3">
+            <img src="images/Serenity.webp" alt="Serenity-img" class="w-12 h-12 rounded" />
+            <div>
+              <p class="text-sm">Serenity Starter Pack</p>
+              <p class="text-sm font-bold">$50.00</p>
+              <p>☆☆☆☆☆</p>
+            </div>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="images/Focus-Flow.webp" alt="Focus-Flow-img" class="w-12 h-12 rounded" />
+            <div>
+              <p class="text-sm">Focus Flow Series</p>
+              <p class="text-sm font-bold">$75.00</p>
+              <p>☆☆☆☆☆</p>
+            </div>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="images/Deep-Sleep.webp" alt="Deep-Sleep-img" class="w-12 h-12 rounded" />
+            <div>
+              <p class="text-sm">Deep Sleep Bundle</p>
+              <p class="text-sm font-bold">$100.00</p>
+              <p>☆☆☆☆☆</p>
+            </div>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="images/Emotional-Balance.webp" alt="Emotional-Balance-img" class="w-12 h-12 rounded" />
+            <div>
+              <p class="text-sm">Emotional Balance Program</p>
+              <p class="text-sm font-bold">$125.00</p>
+              <p>☆☆☆☆☆</p>
+            </div>
+          </li>
+          <li class="flex items-center space-x-3">
+            <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate-Relaxation-Retreat-img"
+              class="w-12 h-12 rounded" />
+            <div>
+              <p class="text-sm">Ultimate Relaxation Retreat</p>
+              <p class="text-sm font-bold">$150.00</p>
+              <p>☆☆☆☆☆</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="w-3/4 bg-white px-26 py-26">
+      <p class="mb-6 text-gray-500">Home / Store</p>
+      <div class="flex items-center justify-between mb-6">
+        <p>Showing all 10 results</p>
+        <select title="Sorting" class="p-2 border border-gray-300 rounded">
+          <option>Default sorting</option>
+          <option>Sort by Popularity</option>
+          <option>Sort by Average Rating</option>
+          <option>Sort by Latest</option>
+          <option>Sort by Price: Low to High</option>
+          <option>Sort by Price: High to Low</option>
+        </select>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-3 gap-8">
+        <!-- Product Card -->
+        <div>
+          <img src="images/Deep-Sleep.webp" alt="Deep-Sleep-img" class="w-full rounded" />
+          <p class="mt-2">Deep Sleep Bundle</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$100.00</p>
+        </div>
+
+        <div>
+          <img src="images/Emotional-Balance.webp" alt="Emotional-Balance-img" class="w-full rounded" />
+          <p class="mt-2">Emotional Balance Program</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$125.00</p>
+        </div>
+
+        <div>
+          <img src="images/Focus-Flow.webp" alt="Focus-Flow-img" class="w-full rounded" />
+          <p class="mt-2">Focus Flow Series</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$75.00</p>
+        </div>
+
+        <div>
+          <img src="images/Kids-Calm.webp" alt="Kids-Calm-img" class="w-full rounded" />
+          <p class="mt-2">Kids’ Calm Collection</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$100.00</p>
+        </div>
+
+        <div>
+          <img src="images/Mindful-Movement.webp" alt="Mindful-Movement-img" class="w-full rounded" />
+          <p class="mt-2">Mindful Movement Audio Set</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$110.00</p>
+        </div>
+
+        <div>
+          <img src="images/Morning-Mindfulness.webp" alt="Morning-Mindfulness-img" class="w-full rounded" />
+          <p class="mt-2">Morning Mindfulness Pack</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$60.00</p>
+        </div>
+
+        <div>
+          <img src="images/Serenity.webp" alt="Serenity-img" class="w-full rounded" />
+          <p class="mt-2">Serenity Starter Pack</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$50.00</p>
+        </div>
+
+        <div>
+          <img src="images/Stress-Detox.webp" alt="Stress-Detox-img" class="w-full rounded" />
+          <p class="mt-2">Stress Detox Program</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$90.00</p>
+        </div>
+
+        <div>
+          <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate-Relaxation-Retreat-img"
+            class="w-full rounded" />
+          <p class="mt-2">Ultimate Relaxation Retreat</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$150.00</p>
+        </div>
+
+        <div>
+          <img src="images/Zen-Master.webp" alt="Zen-Master-img" class="w-full rounded" />
+          <p class="mt-2">Zen Master Collection</p>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="font-bold">$200.00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="flex justify-between px-8 py-6 text-sm text-gray-600 bg-white">
+    <p>Copyright © 2025 Luxury Shop Spectrum</p>
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:text-purple-600">Contact Us</a></li>
+      <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
+      <li><a href="#" class="hover:text-purple-600">Refund Policy</a></li>
+      <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>
