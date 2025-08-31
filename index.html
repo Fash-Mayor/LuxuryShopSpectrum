@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Shop Spectrum - Guided Meditation Audio for Relaxation and Well-Being</title>
     <link rel="icon" type="image/x-icon" href="images/cropped-Luxury-Shop-Spectrum-fav.webp">
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="otherstyles.css">
+    <!-- <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="otherstyles.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,30 +19,40 @@
 
 </head>
 
-<body>
-    <div class="bg-[url('images/hp-lg.webp')] bg-cover h-screen px-9 pb-6">
+<body class="bg-white text-gray-900 max-sm:w-screen"> 
+    <div class="bg-[url('images/hp-lg.webp')] bg-cover h-2/3 xl:h-screen sm:px-9 pb-6">
+
         <!-- Header -->
         <header class="flex items-center justify-between px-8 py-4 mb-9">
+            <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="cropped-Luxury-Shop-Spectrum-logo">
+                <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="cropped-Luxury-Shop-Spectrum-logo" class="h-10 md:h-12">
             </div>
-            <nav>
+            <!-- Desktop Nav -->
+            <nav class="hidden sm:block">
                 <ul class="flex space-x-6 font-semibold">
                     <li><a href="index.html" class="text-purple-600">HOME</a></li>
                     <li><a href="shop.html" class=" hover:text-purple-600">SHOP</a></li>
                     <li><a href="contactus.html" class="hover:text-purple-600">CONTACT US</a></li>
                 </ul>
             </nav>
+
+            <!-- Mobile Menu Icon -->
+            <div class="block sm:hidden text-2xl">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Cart Icon -->
             <div>
                 <i class='bxr bxs-shopping-bag'></i>
                 <span class="absolute px-1 text-xs text-white bg-black rounded-full ">0</span>
             </div>
         </header>
 
-
-        <div class="flex flex-row items-center justify-between p-5 my-4 mx-9">
-            <div class="w-200">
-                <h1 class="my-4 text-6xl font-bold font-custom-petrona">Find Your Inner Peace With Luxury Shop Spectrum
+        <!-- Hero Section -->
+        <div class="flex flex-col-reverse items-center justify-between gap-8 px-6 lg:flex-row md:px-12">
+            <div class="w-70 md:w-200 my-4">
+                <h1 class="my-4 text-4xl md:text-6xl font-bold font-custom-petrona">Find Your Inner Peace With Luxury Shop Spectrum
                 </h1>
                 <p class="my-5 text-xl text-gray-500 font-custom-dm">
                     Luxury Shop Spectrum provides soothing guided meditation audio that helps you relax,
@@ -53,7 +64,7 @@
                 </a>
             </div>
             <div>
-                <img src="images/Meditation-hero-1.webp" alt="relaxed-meditation-hero" class="w-200 h-100">
+                <img src="images/Meditation-hero-1.webp" alt="relaxed-meditation-hero" class="w-130 md:w-200 h-65 md:h-100">
             </div>
         </div>
     </div>

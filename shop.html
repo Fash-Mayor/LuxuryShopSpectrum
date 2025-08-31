@@ -2,219 +2,258 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store - Luxury Shop Spectrum</title>
-  <link rel="stylesheet" href="mystyle.css">
-  <link rel="stylesheet" href="otherstyles.css">
-  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/cropped-Luxury-Shop-Spectrum-fav.webp">
+    
 </head>
 
-<body class="text-gray-800 bg-gray-100">
+<body class="bg-gray-100 text-gray-900">
 
   <!-- Header -->
-  <header class="flex items-center justify-between px-8 py-4 bg-white shadow-sm mb-9">
-    <div class="flex items-center space-x-2">
-      <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="cropped-Luxury-Shop-Spectrum-logo">
-    </div>
-    <nav>
-      <ul class="flex space-x-6 font-semibold">
-        <li><a href="index.html" class="hover:text-purple-600">HOME</a></li>
-        <li><a href="shop.html" class="text-purple-600">SHOP</a></li>
-        <li><a href="contactus.html" class="hover:text-purple-600">CONTACT US</a></li>
-      </ul>
-    </nav>
-    <div>
-      <i class='bxr bxs-shopping-bag'></i>
-      <span class="absolute px-1 text-xs text-white bg-black rounded-full ">0</span>
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="Luxury Shop Spectrum" class="h-10">
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden sm:block">
+        <ul class="flex space-x-8 font-semibold text-sm uppercase">
+          <li><a href="index.html" class="hover:text-purple-600">Home</a></li>
+          <li><a href="shop.html" class="text-purple-600">Shop</a></li>
+          <li><a href="contactus.html" class="hover:text-purple-600">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <div class="block sm:hidden text-2xl">
+        <i class='bx bx-menu'></i>
+      </div>
+
+      <!-- Cart -->
+      <div class="relative">
+        <i class="bx bx-shopping-bag text-2xl"></i>
+        <span
+          class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+      </div>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="flex px-8 py-8 ">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 flex flex-col lg:flex-row gap-10">
 
     <!-- Sidebar -->
-    <aside class="w-1/4 pr-8">
+    <aside class="w-full lg:w-1/4 p-6 rounded-md">
       <!-- Search -->
-      <div class="mb-6">
-        <input type="text" placeholder="Search products..." class="w-full p-2 border border-gray-300 rounded" />
+      <div class="mb-8">
+        <div class="relative">
+          <input type="text" placeholder="Search products..."
+            class="w-full px-4 py-2 border rounded-full text-sm focus:outline-none">
+          <div
+            class="absolute right-1 top-1 bottom-1 px-3 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+        </div>
       </div>
 
       <!-- Filter by Price -->
-      <div class="mb-6">
-        <h3 class="mb-2 font-semibold">Filter by Price</h3>
-        <input title="" placeholder="-" type="range" min="0" max="200" value="100" class="w-full" />
-        <div class="flex items-center justify-between mt-2">
+      <div class="mb-8">
+        <h3 class="font-semibold mb-2">Filter by Price</h3>
+        <label for=""></label>
+        <input type="range" min="0" max="200" value="100" class="w-full">
+        <div class="flex justify-between text-sm mt-1"> <!-- center both contents -->
           <span>Price: $0 - $200</span>
-          <button class="px-3 py-1 text-white bg-black rounded">Filter</button>
+          <button class="mt-2 px-4 py-1 bg-black text-white text-xs rounded">Filter</button>
         </div>
       </div>
 
       <!-- Categories -->
-      <div class="mb-6">
-        <h3 class="mb-2 font-semibold">Categories</h3>
-        <ul class="space-y-1">
-          <li><a href="#" class="text-gray-600 hover:text-purple-600">Uncategorized (10)</a></li>
+      <div class="mb-8">
+        <h3 class="font-semibold mb-2">Categories</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Uncategorized (10)</a></li>
         </ul>
       </div>
 
       <!-- Best Sellers -->
       <div>
-        <h3 class="mb-2 font-semibold">Our Best Sellers</h3>
+        <h3 class="font-semibold mb-2">Our Best Sellers</h3>
         <ul class="space-y-4">
+          <!-- Best Seller Item -->
           <li class="flex items-center space-x-3">
-            <img src="images/Serenity.webp" alt="Serenity-img" class="w-12 h-12 rounded" />
+            <img src="images/Serenity.webp" alt="Serenity Starter Pack"
+              class="w-12 h-12 object-cover rounded">
             <div>
               <p class="text-sm">Serenity Starter Pack</p>
-              <p class="text-sm font-bold">$50.00</p>
-              <p>☆☆☆☆☆</p>
+              <p class="text-xs text-gray-500">$50.00</p>
             </div>
           </li>
           <li class="flex items-center space-x-3">
-            <img src="images/Focus-Flow.webp" alt="Focus-Flow-img" class="w-12 h-12 rounded" />
+            <img src="images/Focus-Flow.webp" alt="Focus Flow Series"
+              class="w-12 h-12 object-cover rounded">
             <div>
               <p class="text-sm">Focus Flow Series</p>
-              <p class="text-sm font-bold">$75.00</p>
-              <p>☆☆☆☆☆</p>
+              <p class="text-xs text-gray-500">$75.00</p>
             </div>
           </li>
           <li class="flex items-center space-x-3">
-            <img src="images/Deep-Sleep.webp" alt="Deep-Sleep-img" class="w-12 h-12 rounded" />
+            <img src="images/Deep-Sleep.webp" alt="Deep Sleep Bundle"
+              class="w-12 h-12 object-cover rounded">
             <div>
               <p class="text-sm">Deep Sleep Bundle</p>
-              <p class="text-sm font-bold">$100.00</p>
-              <p>☆☆☆☆☆</p>
+              <p class="text-xs text-gray-500">$100.00</p>
             </div>
           </li>
           <li class="flex items-center space-x-3">
-            <img src="images/Emotional-Balance.webp" alt="Emotional-Balance-img" class="w-12 h-12 rounded" />
+            <img src="images/Emotional-Balance.webp" alt="Emotional Balance Program"
+              class="w-12 h-12 object-cover rounded">
             <div>
               <p class="text-sm">Emotional Balance Program</p>
-              <p class="text-sm font-bold">$125.00</p>
-              <p>☆☆☆☆☆</p>
+              <p class="text-xs text-gray-500">$125.00</p>
             </div>
           </li>
           <li class="flex items-center space-x-3">
-            <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate-Relaxation-Retreat-img"
-              class="w-12 h-12 rounded" />
+            <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate Relaxation Retreat"
+              class="w-12 h-12 object-cover rounded">
             <div>
               <p class="text-sm">Ultimate Relaxation Retreat</p>
-              <p class="text-sm font-bold">$150.00</p>
-              <p>☆☆☆☆☆</p>
+              <p class="text-xs text-gray-500">$150.00</p>
             </div>
           </li>
         </ul>
       </div>
     </aside>
 
-    <!-- Product Grid -->
-    <section class="w-3/4 bg-white px-26 py-26">
-      <p class="mb-6 text-gray-500">Home / Store</p>
+    <!-- Products Section -->
+    <section class="w-full lg:w-3/4 bg-white p-16">
+        <p class="mb-4 text-gray-500">Home / Store</p>
       <div class="flex items-center justify-between mb-6">
-        <p>Showing all 10 results</p>
-        <select title="Sorting" class="p-2 border border-gray-300 rounded">
-          <option>Default sorting</option>
-          <option>Sort by Popularity</option>
-          <option>Sort by Average Rating</option>
-          <option>Sort by Latest</option>
-          <option>Sort by Price: Low to High</option>
-          <option>Sort by Price: High to Low</option>
-        </select>
+       
+          <p>Showing all 10 results</p>
+          <select title="sorting" class="p-2 border border-grey-300 rounded">Default sorting
+            <option>Default sorting</option>
+            <option>Sort by Popularity</option>
+            <option>Sort by Average Rating</option>
+            <option>Sort by Latest</option>
+            <option>Sort by Price: Low to High</option>
+            <option>Sort by Price: High to Low</option>
+          </select>
+  
       </div>
 
-      <!-- Grid -->
-      <div class="grid grid-cols-3 gap-8">
-        <!-- Product Card -->
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Product -->
         <div>
-          <img src="images/Deep-Sleep.webp" alt="Deep-Sleep-img" class="w-full rounded" />
-          <p class="mt-2">Deep Sleep Bundle</p>
+          <img src="images/Deep-Sleep.webp" alt="Deep Sleep Bundle"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Deep Sleep Bundle</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$100.00</p>
+          <p class="mt-1 font-bold">$100.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
+        </div>
+
+        <!-- Repeat products (example placeholders) -->
+        <div>
+          <img src="images/Emotional-Balance.webp" alt="Emotional Balance Program"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Emotional Balance Program</h3>
+          <p class="text-sm text-gray-500">Uncategorized</p>
+          <p class="mt-1 font-bold">$125.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Emotional-Balance.webp" alt="Emotional-Balance-img" class="w-full rounded" />
-          <p class="mt-2">Emotional Balance Program</p>
+          <img src="images/Focus-Flow.webp" alt="Focus Flow Series"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Focus Flow Series</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$125.00</p>
+          <p class="mt-1 font-bold">$75.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Focus-Flow.webp" alt="Focus-Flow-img" class="w-full rounded" />
-          <p class="mt-2">Focus Flow Series</p>
+          <img src="images/Kids-Calm.webp" alt="Kids’ Calm Collection"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Kids’ Calm Collection</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$75.00</p>
+          <p class="mt-1 font-bold">$1.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Kids-Calm.webp" alt="Kids-Calm-img" class="w-full rounded" />
-          <p class="mt-2">Kids’ Calm Collection</p>
+          <img src="images/Mindful-Movement.webp" alt="Mindful Movement Audio Set"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Mindful Movement Audio Set</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$100.00</p>
+          <p class="mt-1 font-bold">$110.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Mindful-Movement.webp" alt="Mindful-Movement-img" class="w-full rounded" />
-          <p class="mt-2">Mindful Movement Audio Set</p>
+          <img src="images/Morning-Mindfulness.webp" alt="Morning Mindfulness Pack"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Morning Mindfulness Pack</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$110.00</p>
+          <p class="mt-1 font-bold">$60.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Morning-Mindfulness.webp" alt="Morning-Mindfulness-img" class="w-full rounded" />
-          <p class="mt-2">Morning Mindfulness Pack</p>
+          <img src="images/Serenity.webp" alt="Serenity Starter Pack"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Serenity Starter Pack</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$60.00</p>
+          <p class="mt-1 font-bold">$50.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Serenity.webp" alt="Serenity-img" class="w-full rounded" />
-          <p class="mt-2">Serenity Starter Pack</p>
+          <img src="images/Stress-Detox.webp" alt="Stress Detox Program"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Stress Detox Program</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$50.00</p>
+          <p class="mt-1 font-bold">$90.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Stress-Detox.webp" alt="Stress-Detox-img" class="w-full rounded" />
-          <p class="mt-2">Stress Detox Program</p>
+          <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate Relaxation Retreat"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Ultimate Relaxation Retreat</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$90.00</p>
+          <p class="mt-1 font-bold">$150.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
 
         <div>
-          <img src="images/Ultimate-Relaxation-Retreat.webp" alt="Ultimate-Relaxation-Retreat-img"
-            class="w-full rounded" />
-          <p class="mt-2">Ultimate Relaxation Retreat</p>
+          <img src="images/Zen-Master.webp" alt="Zen Master Collection"
+            class="w-full h-56 object-cover rounded">
+          <h3 class="mt-3 font-semibold">Zen Master Collection</h3>
           <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$150.00</p>
-        </div>
-
-        <div>
-          <img src="images/Zen-Master.webp" alt="Zen-Master-img" class="w-full rounded" />
-          <p class="mt-2">Zen Master Collection</p>
-          <p class="text-sm text-gray-500">Uncategorized</p>
-          <p class="font-bold">$200.00</p>
+          <p class="mt-1 font-bold">$200.00</p>
+          <p class="text-yellow-400">☆☆☆☆☆</p>
         </div>
       </div>
     </section>
-  </main>
+  </div>
 
   <!-- Footer -->
-  <footer class="flex justify-between px-8 py-6 text-sm text-gray-600 bg-white">
-    <p>Copyright © 2025 Luxury Shop Spectrum</p>
-    <ul class="flex space-x-6">
-      <li><a href="#" class="hover:text-purple-600">Contact Us</a></li>
-      <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
-      <li><a href="#" class="hover:text-purple-600">Refund Policy</a></li>
-      <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
-    </ul>
+  <footer class="bg-white py-4">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+      <p>Copyright © 2025 Luxury Shop Spectrum</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-gray-900">Contact Us</a>
+        <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-900">Refund Policy</a>
+        <a href="#" class="hover:text-gray-900">Terms of Service</a>
+      </div>
+    </div>
   </footer>
 
 </body>
