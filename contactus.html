@@ -21,20 +21,31 @@
 
   <!-- Header -->
   <header class="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
+
+    <!-- Logo -->
     <div class="flex items-center space-x-2">
       <img src="images/cropped-Luxury-Shop-Spectrum-logo.webp" alt="cropped-Luxury-Shop-Spectrum-logo">
     </div>
-    <nav>
+
+    <!-- Navigation -->
+    <nav class="hidden md:block">
       <ul class="flex space-x-6 font-semibold">
         <li><a href="index.html" class="hover:text-purple-600">HOME</a></li>
         <li><a href="shop.html" class="hover:text-purple-600">SHOP</a></li>
         <li><a href="contactus.html" class="text-purple-600">CONTACT US</a></li>
       </ul>
     </nav>
+
+    <!-- Mobile Menu Icon -->
+        <div class="block sm:hidden text-2xl">
+          <i class='bx bx-menu'></i>
+        </div>
+
+    <!-- Cart Icon -->
     <div>
-      <i class='bxr bxs-shopping-bag'></i>
-      <span class="absolute px-1 text-xs text-white bg-black rounded-full ">0</span>
-    </div>
+          <i class="bx bx-shopping-bag text-2xl"></i>
+          <span class="absolute px-1 text-xs text-white bg-black rounded-full ">0</span>
+        </div>
   </header>
 
   <section class="relative mb-14">
